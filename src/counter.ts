@@ -13,7 +13,7 @@ export async function getAllEmploeeys(): Promise<emploee[]> {
     let users = data.data;
     console.log(users);
     return users;
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error:", error.message);
     return [];
   }
@@ -34,7 +34,7 @@ export async function getEmploeeByWordSearch(
     );
     console.log("filter:", filteredUsers);
     return filteredUsers ? [filteredUsers] : null;
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error:", error.message);
     return [];
   }
@@ -46,7 +46,7 @@ export async function getEmploeeById(id: number): Promise<emploee | null> {
     const filteredUsers = users.find((user: emploee) => user.id === id);
     console.log(filteredUsers);
     return filteredUsers || null;
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error:", error.message);
     return null;
   }
