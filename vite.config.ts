@@ -6,5 +6,5 @@ export default defineConfig({
     outDir: "dist",
     emptyOutDir: true,
   },
-  base: "/emploee-app/", // Replace with your repo name
+  base: "/simple-app-deploy/", // Replace with your repo name
 });
